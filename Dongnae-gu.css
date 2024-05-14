@@ -1,0 +1,105 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#wrap{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#center{
+    display: inline-block;
+    width: 1300px;
+    height: 100%;
+    background-color: gainsboro;
+}
+
+#header{
+    display: flex;
+    border: 1px solid black;
+    width: 100%;
+    height: 7vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo{
+    border: 1px solid black;
+    width: 15%;
+    height: 100%;
+}
+
+#location{
+    border: 1px solid black;
+    width: 14%;
+    height: 100%;
+}   
+
+#food{
+    border: 1px solid black;
+    width: 14%;
+    height: 100%;
+}
+
+#festival{
+    border: 1px solid black;
+    width: 14%;
+    height: 100%;
+}
+
+#search{
+    border: 1px solid black;
+    width: 35%;
+    height: 100%;
+}
+
+#mypage{
+    border: 1px solid black;
+    width: 8%;
+    height: 100%;
+}
+
+#picture{
+    display: flex;
+    border: 1px solid black;
+    width: 100%;
+    height: 55vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#recommend{
+    display: flex;
+    border: 1px solid black;
+    width: 100%;
+    height: 30vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.re_item{
+    border: 1px solid black;
+    width: 18%;
+    height: 80%;
+    border-radius: 30px;
+}
+
+#bottom{
+    display: flex;
+    border: 1px solid black;
+    width: 100%;
+    height: 8vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#site{
+    margin-left: 15px;
+}
+
+#weather{
+    margin-right: 15px;
+}
+
