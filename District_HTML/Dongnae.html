@@ -99,9 +99,47 @@
                 <div id="reference">
                     https://www.flaticon.com/kr/<br>https://visitbusan.net/kr/index.do<br>https://www.siksinhot.com/
                 </div>
-                <div id="weather">날씨 API</div>
+                <div id="weather">
+                    <div id="weather_info"></div>
+                </div>
             </div>
         </div>
     </div>
+    <script>
+        const API_KEY = '05c6877ec7d415b3bb614c54745fefb5';
+        const LATITUDE = 35.1796;
+        const LONGITUDE = 129.0756;
+        const LOCATION_NAME = "부산";
+
+        document.addEventListener('DOMContentLoaded', () => {
+            getWeather(LATITUDE, LONGITUDE);
+        });
+
+        const getWeather = (lat, lon) => {
+            fetch(
+                `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=kr`
+            )
+            .then(response => response.json())
+            .then((data) => {
+                console.log(data);
+                displayWeather(data);
+            });
+        }
+
+        const displayWeather = (data) => {
+            const temperature = data.main.temp;
+            const iconCode = data.weather[0].icon;
+            const iconUrl = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
+
+            let weatherInfo = document.getElementById('weather_info');
+            weatherInfo.innerHTML = `
+                <img src="${iconUrl}" alt="Weather Icon">
+                <div>
+                    <p>${LOCATION_NAME}</p>
+                    <p>${temperature}°C</p>
+                </div>
+            `;
+        }
+    </script>
 </body>
 </html>

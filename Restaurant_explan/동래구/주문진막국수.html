@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>주문진막국수</title>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5499d68116f0608c17f78697ee266efe"></script>
 </head>
 <link rel="stylesheet" href="../Restaurant_explan.css">
 <body>
@@ -36,7 +37,7 @@
         <div class = "picture">
             <img id="picture_item_1" src="https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20150925_96%2F1443159957954T9hl3_JPEG%2F166875547575198_2.jpg" alt="">
         </div>
-        <div class="descript" id="descript_1">부산 사직동에 위치한 '소문난주문진막국수'는 1991년부터 사직구장 옆에 자리 잡은 막국수 전문점입니다. 시원한 국물에 잘 삶아진 면발과 고소한 깨, 김가루를 뿌려 주는 '막국수'와 매콤 새콤한 '비빔막국수'가 대표 메뉴입니다. 한방 냄새가 느껴지는 '수육'은 가자미 식해를 곁들여 먹으면 그 맛이 일품입니다.
+        <div class="descript" id="descript_1">부산 사직동에 위치한 '소문난주문진막국수'는 1991년부터 사직구장 옆에 자리 잡은 막국수 전문점이다. 시원한 국물에 잘 삶아진 면발과 고소한 깨, 김가루를 뿌려 주는 '막국수'와 매콤 새콤한 '비빔막국수'가 대표 메뉴이다. 한방 냄새가 느껴지는 '수육'은 가자미 식해를 곁들여 먹으면 그 맛이 일품이다.
         </div>
         <div class ="picture" id="picture_2">
             <img class ="picture_item_2" src="https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20150925_114%2F1443159957333qANPu_JPEG%2F166875547575198_0.jpg" alt="">
@@ -49,7 +50,7 @@
                     <div id="guide_left">
                         <div>대표메뉴</div>
                         <div>전화번호</div>
-                        <div>운영요일 및 시간</div>
+                        <div>운영시간</div>
                         <div>주소</div>
                         <div>휴무일</div> 
                     </div>
@@ -57,8 +58,7 @@
                         <div>막국수</div>
                         <div>051-501-7856</div>
                         <div>11:00 ~ 21:30</div>
-                        <div>부산광역시 동래구 사직로58번길 8
-                        </div>
+                        <div>부산광역시 동래구 사직로58번길 8</div>
                         <div>연중무휴</div>
                     </div>
                 </div>
@@ -73,8 +73,62 @@
             <div id="reference">
                 https://www.flaticon.com/kr/<br>https://visitbusan.net/kr/index.do<br>https://www.siksinhot.com/
             </div>
-            <div id="weather">날씨 API</div>
+            <div id="weather">
+                <div id="weather_info"></div>
+            </div>
         </div>
     </div>
+    </div>
+    <script>
+        const API_KEY = '05c6877ec7d415b3bb614c54745fefb5';
+        const LATITUDE = 35.1796;
+        const LONGITUDE = 129.0756;
+        const LOCATION_NAME = "부산";
+
+        document.addEventListener('DOMContentLoaded', () => {
+            getWeather(LATITUDE, LONGITUDE);
+        });
+
+        const getWeather = (lat, lon) => {
+            fetch(
+                `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=kr`
+            )
+            .then(response => response.json())
+            .then((data) => {
+                console.log(data);
+                displayWeather(data);
+            });
+        }
+
+        const displayWeather = (data) => {
+            const temperature = data.main.temp;
+            const iconCode = data.weather[0].icon;
+            const iconUrl = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
+
+            let weatherInfo = document.getElementById('weather_info');
+            weatherInfo.innerHTML = `
+                <img src="${iconUrl}" alt="Weather Icon">
+                <div>
+                    <p>${LOCATION_NAME}</p>
+                    <p>${temperature}°C</p>
+                </div>
+            `;
+        }
+
+        let container = document.getElementById('map');
+
+        let options = {
+            center: new kakao.maps.LatLng(35.195931, 129.059470),
+            level: 3
+        };
+        
+        let map = new kakao.maps.Map(container, options);
+
+        let marker = new kakao.maps.Marker({
+            position: new kakao.maps.LatLng(35.195931, 129.059470)
+        });
+
+        marker.setMap(map);
+    </script>
 </body>
 </html>
