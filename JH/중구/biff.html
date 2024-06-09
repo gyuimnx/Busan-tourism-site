@@ -12,16 +12,16 @@
     <div id= "container">
         <div id="header">
             <div id="logo">
-                <a href=""><img id="dsu" src="/final_exams/icon/동서대로고.jpg" alt="HOME" title="HOME"></a>
+                <a href="/TW/지도/html/HelloBusan.html"><img id="dsu" src="/icon/동서대로고.jpg" alt="HOME" title="HOME"></a>
             </div>
             <div id="location">
-                <a class="head_a" href="/final_exams/Place/Place_1.html" target="_blank"><button class="head_but">명 소</button></a>
+                <a class="head_a" href="/Place/Place_1.html" target="_blank"><button class="head_but">명 소</button></a>
             </div>
             <div id="food">
-                <a class="head_a" href="/final_exams/Restaurant/Restaurant_1.html" target="_blank"><button class="head_but">맛 집</button></a>
+                <a class="head_a" href="/Restaurant/Restaurant_1.html" target="_blank"><button class="head_but">맛 집</button></a>
             </div>
             <div id="festival">
-                <a class="head_a" href=""><button class="head_but">HOME</button></a>
+                <a class="head_a" href="/TW/지도/html/HelloBusan.html"><button class="head_but">지 도</button></a>
             </div>
             <div id="search">
                 <form id="form1" name="search">
@@ -29,56 +29,26 @@
                 </form>
             </div>
             <div id="mypage">
-                <a href=""><img id="mypagelogo" src="/final_exams/icon/마이페이지.png" alt="마이페이지"></a>
+                <a href="/TW/로그인/login.html"><img id="mypagelogo" src="/icon/마이페이지.png" alt="마이페이지"></a>
             </div>
         </div>
         <div id= "title">
-            <h1>BIFF광장
+            <h1>영화와 다양한 먹거리를 즐길 수 있는 곳<br>BIFF 광장
             </h1>
         </div>
         <div class = "picture">
             <img id="picture_item_1" src="https://www.visitbusan.net/uploadImgs/files/cntnts/20200812174427358_oen" alt="">
         </div>
-        <div class="descript" id="descript_1">
-            BIFF광장은 남포동에 위치하고 있다.<br> 영화의 도시 부산답게 BIFF거리에는 영화와 관련된 볼 것들이 많다.<br> BIFF거리를 걷다보면 바닥을 가득 채운 전 세계 유명 영화감독과 배우들의 핸드프린팅이 있어 이 <br>거리를 지날 땐 바닥을 유심히 살펴보는 것도 재밌다.
+        <div class="descript" id="descript_1">BIFF 광장은 부산광역시 중구 남포동에 위치한 상징적인 장소로, 부산국제영화제(BIFF)의 중심지이다. 1996년에 시작된 부산국제영화제를 기념하기 위해 만들어졌으며, 세계적인 영화감독과 배우들의 핸드프린팅과 서명이 새겨진 '명예의 거리'가 있다. 매년 가을에 열리는 영화제를 중심으로 다양한 영화 관련 행사와 이벤트가 이곳에서 열린다.
         </div>
         <div class ="picture" id="picture_2">
             <img class ="picture_item_2" src="https://www.visitbusan.net/uploadImgs/files/cntnts/20191231202034049_wufrotr" alt="">
-            <img class ="picture_item_2" src="https://www.visitbusan.net/uploadImgs/files/cntnts/20191231202034049_wufrotr" alt="">
+            <img class ="picture_item_2" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxNzA0MjBfMiAg%2FMDAxNDkyNjY4Nzc5ODIw.1gwacRpAmF39wvPqkwls18GVINsDRndP7HBmu4M1xGYg.XPzPrwfTQ7124gsyhcTPAyO4U38-lQ8fD2oET2zV_Xcg.JPEG.angelrical%2FIMG_2161.JPG&type=sc960_832" alt="">
         </div>
-        <div class="descript" id="descript_2">
-            이곳에는 부산 출신 유명인의 손자국과 발자국 등을 구경할 수 있다.<br>방송에서 장혁이 자신의 발자국을 발견하고 좋아하는 모습과 이시언이 자신의 발자국을 찾지 못해 <br>속상해하는 모습에 웃음이 멈추질 않는다.<br> 자신이 좋아하는 영화인의 발자국을 찾는 것도 재있을 것이다.
+        <div class="descript" id="descript_2">이 광장은 자갈치 시장, 국제시장, 용두산 공원 등 부산의 주요 관광지와 인접해 있어 관광객들이 편리하게 방문할 수 있다. 주변에는 다양한 상점, 카페, 레스토랑이 밀집해 있어 문화와 엔터테인먼트가 융합된 활기찬 분위기를 자아낸다. 부산 지하철 1호선 남포역과 가까워 교통이 편리하며, 다양한 버스 노선도 이곳을 경유해 접근성이 뛰어나다.
         </div>
         <div id="information">
-            <div id="map">
-                <script>
-                    let container = document.getElementById('map');
-                    let options = {
-                        center: new kakao.maps.LatLng(35.09824, 129.0292),
-                        leveel: 3
-                    };
-                
-                    let map = new kakao.maps.Map(container, options);
-                    
-                    let markerPosition = new kakao.maps.LatLng(35.09824, 129.0292)
-                    
-                    let marker = new kakao.maps.Marker({
-                        position : markerPosition
-                    })
-                    
-                    marker.setMap(map)
-    
-                    kakao.maps.event.addListener(map, 'click', (mouseEvent)=>{
-    
-                        //클릭한 위도, 경도 정보 가져오기
-                        let latlng = mouseEvent.latLng;
-    
-                        let message = `클릭한 위치의 위도는 ${latlng.getLat()}이고, 경도는 ${latlng.getLng()}입니다`;
-    
-                        console.log(message)
-                    });
-                </script>
-            </div>
+            <div id="map"></div>
             <div id="guide">
                 <div id="guide_info">
                     <div id = "guide_left">
@@ -98,15 +68,66 @@
         </div>
         <div id="bottom">
             <div id="site">
-                <a href="https://bto.or.kr/kor/Main.do" target="_blank" title="부산관광공사 바로가기"><img class="bot" src="/final_exams/icon/부산관광공사.png" alt="부산관광공사"></a>&nbsp;&nbsp;&nbsp;
-                <a href="https://youtube.com/@busan_is_good?si=lN-pwJgqLTfJ-J5P" target="_blank" title="부산 공식유튜브 바로가기"><img class="bot" src="/final_exams/icon/유튜브 아이콘.png" alt="부산공식유튜브"></a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://www.instagram.com/busancity?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" title="부산 공식인스타그램 바로가기"><img class="bot" src="/final_exams/icon/인스타 아이콘.png" alt="부산공식인스타그램"></a>
+                <a href="https://bto.or.kr/kor/Main.do" target="_blank" title="부산관광공사 바로가기"><img class="bot" src="/icon/부산관광공사.png" alt="부산관광공사"></a>&nbsp;&nbsp;&nbsp;
+                <a href="https://youtube.com/@busan_is_good?si=lN-pwJgqLTfJ-J5P" target="_blank" title="부산 공식유튜브 바로가기"><img class="bot" src="/icon/유튜브 아이콘.png" alt="부산공식유튜브"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://www.instagram.com/busancity?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" title="부산 공식인스타그램 바로가기"><img class="bot" src="/icon/인스타 아이콘.png" alt="부산공식인스타그램"></a>
             </div>
             <div id="reference">
                 https://www.flaticon.com/kr/<br>https://visitbusan.net/kr/index.do<br>https://www.siksinhot.com/
             </div>
-            <div id="weather">날씨 API</div>
+            <div id="weather">
+                <div id="weather_info"></div>
+            </div>
         </div>
     </div>
+    <script>
+        const API_KEY = '05c6877ec7d415b3bb614c54745fefb5';
+        const LATITUDE = 35.1796;
+        const LONGITUDE = 129.0756;
+        const LOCATION_NAME = "부산";
+
+        document.addEventListener('DOMContentLoaded', () => {
+            getWeather(LATITUDE, LONGITUDE);
+        });
+
+        const getWeather = (lat, lon) => {
+            fetch(
+                `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=kr`
+            )
+            .then(response => response.json())
+            .then((data) => {
+                console.log(data);
+                displayWeather(data);
+            });
+        }
+
+        const displayWeather = (data) => {
+            const temperature = data.main.temp;
+            const iconCode = data.weather[0].icon;
+            const iconUrl = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
+
+            let weatherInfo = document.getElementById('weather_info');
+            weatherInfo.innerHTML = `
+                <img src="${iconUrl}" alt="Weather Icon">
+                <div>
+                    <p>${LOCATION_NAME}</p>
+                    <p>${temperature}°C</p>
+                </div>
+            `;
+
+            let container = document.getElementById('map');
+            let options = {
+                center: new kakao.maps.LatLng(35.098862, 129.029045),
+                level: 3
+            };
+        
+            let map = new kakao.maps.Map(container, options);
+            let markerPosition = new kakao.maps.LatLng(35.098862, 129.029045)
+            let marker = new kakao.maps.Marker({
+                position : markerPosition
+            })
+            marker.setMap(map)
+        }
+    </script>
 </body>
 </html>

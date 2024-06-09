@@ -1,7 +1,8 @@
 body {
-
     margin: 0;
     position: relative;
+    background-color: rgb(187, 222, 253);
+    /* 배경색별로면 지우기 */
 }
 ::-webkit-scrollbar {
     display: none;
@@ -12,8 +13,6 @@ img{
 }
 
 
-
-
 #main{
     width: 2000px;
     height: 1000px;
@@ -22,27 +21,25 @@ img{
     padding-left: 230px;
     position: relative;
     margin: auto;
-
 }
+
 #hello{
-    font-size: 88px;
+    font-size: 88px;    
     color: rgb(55, 86, 187);
     white-space : nowrap;
     width: 1000px;
     height: 1000px;
     position: relative;
-    top: 100px;
-
+    top: 50px;
 }
 
 #지도{
     width: 1000px;
     height: 1000px;
     position: relative;
-    bottom: 100px;
+    bottom: 120px;
+    right: 450px;
 }
-
-
 
 
 #강서구{

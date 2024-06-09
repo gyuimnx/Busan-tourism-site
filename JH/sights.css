@@ -156,7 +156,6 @@ html, body{
 .descript{
     width: 1000px;
     display: flex;
-    justify-content: center;
     align-items: center;
     font-size: 15pt;
     line-height: 40px;
@@ -179,27 +178,26 @@ html, body{
     display: flex;
     background-color: white;
     justify-content: space-around;
+    padding-top: 20px;
 }
 /* 지도 개인 */
 #map { 
     display: flex;
-    width: 40%;
+    width: 45%;
     height: 300px;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
-    margin-top: 20px;
 }
 /* 이용 안내 개인 */
 #guide {
     display: flex;
-    width: 50%;
+    width: 45%;
     height: 300px;
     justify-content: center;
-    align-items: center;
     font-size:12pt;
     font-weight:bold;
     line-height:35px;
+    margin-top: 10px;
 }
 
 #guide_info {
@@ -208,22 +206,13 @@ html, body{
     align-items: center;
 }
 
-#guide_left > div { 
-    padding-bottom:15px;
+#guide_left > div, #guide_right > div{
+    padding-bottom: 10px;
 }
 
-#guide_left { 
-    margin-right: 50px;
-    width: 150px;
-    text-align: center;
-    padding-top: 15px;
-    padding-bottom:2px;
-}
-
-#guide_right > div { 
-    width: 350px;
-    padding-bottom: 13px;
-    padding-top:2px;
+#guide_left{
+    margin-right: 30px;
+    width: 100px;
 }
 
 /* -------------센터 끝--------------- */
@@ -234,33 +223,50 @@ html, body{
     width: 1000px;
     height: 70px;
     justify-content: space-between;
-    /* align-items: center; */
-    /* margin-bottom: 10px ; */ 
     background-color: rgb(221, 239, 246)
 }
 
 #site{
-    margin-left: 8px;
     width: 250px;
     height: 100%;
-}
-
-#weather{
-    margin-right: 15px;
+    padding-left: 30px;
 }
 
 .bot{
     width: 40px;
     height: 40px;
     border-radius: 10px;
-    padding-left: 5px;
+    padding-left: 3px;
     margin-top: 18px;
 }
 
 #reference{
     font-size: small;
     margin-top: 12px;
-    margin-right: 150px;
-    /* 날씨 API 넣고 마진 수정하기 */
+    margin-right: 50px;
+    text-align: left;
+}
+
+#weather_info{
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 100%;
+}
+
+#weather{
+    width: 150px;
+    height: 100%;
+}
+
+#weather_info > div > p{
+    margin: 0;
+    font-family: "휴먼옛체";
+    text-align: center;
+}
+
+img{
+    width: 100%;
+    height: 100%;
 }
 /* -------------바텀 끝--------------- */
