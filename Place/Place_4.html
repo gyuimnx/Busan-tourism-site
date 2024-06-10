@@ -34,12 +34,12 @@
             <div id="main">
                 <div id="main_place"><h1>명소</h1></div>
                 <div id="main_search">
-                    <form id="form1" name="search">
+                    <form id="form1" name="search" onsubmit="return searchlocation()">
                         <input id="main_sch" type="text">
-                        <img id="mag" src="../icon/돋보기아이콘.png" alt="">
+                        <img id="mag" src="../icon/돋보기아이콘.png" alt="" onclick="searchlocation()">
                     </form>
                 </div>
-                <div class="main_title"><h2>&nbsp;――연제구――――――――――――――――――――――――――――――――――――</h2></div>
+                <div id="연제구" class="main_title"><h2>&nbsp;――연제구――――――――――――――――――――――――――――――――――――</h2></div>
                 <div class="main_container">
                     <div class="main_content">
                         <div class="main_item">
@@ -68,7 +68,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="main_title"><h2>&nbsp;――영도구――――――――――――――――――――――――――――――――――――</h2></div>
+                <div id="영도구" class="main_title"><h2>&nbsp;――영도구――――――――――――――――――――――――――――――――――――</h2></div>
                 <div class="main_container">
                     <div class="main_content">
                         <div class="main_item">
@@ -97,7 +97,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="main_title"><h2>&nbsp;――중구―――――――――――――――――――――――――――――――――――――</h2></div>
+                <div id="중구" class="main_title"><h2>&nbsp;――중구―――――――――――――――――――――――――――――――――――――</h2></div>
                 <div class="main_container">
                     <div class="main_content">
                         <div class="main_item">
@@ -126,7 +126,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="main_title"><h2>&nbsp;――해운대구―――――――――――――――――――――――――――――――――――</h2></div>
+                <div id="해운대구" class="main_title"><h2>&nbsp;――해운대구―――――――――――――――――――――――――――――――――――</h2></div>
                 <div class="main_container">
                     <div class="main_content">
                         <div class="main_item">
@@ -215,5 +215,6 @@
             `;
         }
     </script>
+    <script src="search.js"></script>
 </body>
 </html>

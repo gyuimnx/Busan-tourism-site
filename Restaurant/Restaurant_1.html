@@ -34,12 +34,12 @@
             <div id="main">
                 <div id="main_place"><h1>맛집</h1></div>
                 <div id="main_search">
-                    <form id="form1" name="search">
+                    <form id="form1" name="search" onsubmit="return searchLocation()">
                         <input id="main_sch" type="text">
-                        <img id="mag" src="../icon/돋보기아이콘.png" alt="">
+                        <img id="mag" src="../icon/돋보기아이콘.png" alt="" onclick="searchLocation()">
                     </form>
                 </div>
-                <div class="main_title"><h2>&nbsp;――강서구――――――――――――――――――――――――――――――――――――</h2></div>
+                <div id="강서구" class="main_title"><h2>&nbsp;――강서구――――――――――――――――――――――――――――――――――――</h2></div>
                 <div class="main_container">
                     <div class="main_content">
                         <div class="main_item">
@@ -68,7 +68,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="main_title"><h2>&nbsp;――금정구――――――――――――――――――――――――――――――――――――</h2></div>
+                <div id="금정구" class="main_title"><h2>&nbsp;――금정구――――――――――――――――――――――――――――――――――――</h2></div>
                 <div class="main_container">
                     <div class="main_content">
                         <div class="main_item">
@@ -97,7 +97,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="main_title"><h2>&nbsp;――기장군――――――――――――――――――――――――――――――――――――</h2></div>
+                <div id="기장군" class="main_title"><h2>&nbsp;――기장군――――――――――――――――――――――――――――――――――――</h2></div>
                 <div class="main_container">
                     <div class="main_content">
                         <div class="main_item">
@@ -126,7 +126,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="main_title"><h2>&nbsp;――남구―――――――――――――――――――――――――――――――――――――</h2></div>
+                <div id="남구" class="main_title"><h2>&nbsp;――남구―――――――――――――――――――――――――――――――――――――</h2></div>
                 <div class="main_container">
                     <div class="main_content">
                         <div class="main_item">
@@ -215,5 +215,6 @@
             `;
         }
     </script>
+    <script src="search2.js"></script>
 </body>
 </html>
