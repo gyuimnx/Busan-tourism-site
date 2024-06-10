@@ -23,7 +23,7 @@ function checkLogin() {
     }
     
     if (email1 === email2 && password1 === password2) {
-        window.location.href = "success.html";
+        window.history.back();
     } else {
         alert("이메일 또는 비밀번호가 일치하지 않습니다!");
     }

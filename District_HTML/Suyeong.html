@@ -23,8 +23,8 @@
                     <a class="head_a" href="/TW/지도/html/HelloBusan.html"><button class="head_but">지 도</button></a>
                 </div>
                 <div id="search">
-                    <form id="form1" name="search">
-                        <input id="sch" type="text" placeholder="  검색">
+                    <form id="form1" name="search" onsubmit="return searchLocation()">
+                        <input id="sch" type="text" placeholder="검색">
                     </form>
                 </div>
                 <div id="mypage">
@@ -141,5 +141,6 @@
             `;
         }
     </script>
+    <script src="/search_main.js"></script>
 </body>
 </html>
